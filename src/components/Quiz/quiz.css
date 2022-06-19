@@ -1,0 +1,124 @@
+.quiz__container {
+    display: flex;
+    height: 100vh;
+}
+
+/* ********* TIMER ********** */
+.timer {
+    border: 5px solid #fff;
+    border-radius: 50%;
+    padding: 1.5rem 1.7rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+    position: relative;
+    top: 20%;
+    right: 37%;
+}
+
+/* ********* QUIZ *********** */
+.quiz {
+    width: 75%;
+    background: linear-gradient(90deg, rgba(245,135,247,1) 0%, rgba(0,212,255,1) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.quiz__question {
+    margin-bottom: 2rem;
+    margin-top: 10rem;
+    padding: 1rem 2rem;
+    border: 2px solid #fff;
+    border-radius: 1.5rem;
+    width: 90%;
+    text-align: center;
+    background: rgb(0, 0, 48);
+}
+
+.quiz__answers {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 1rem;
+    width: 90%;
+}
+
+.quiz__answer {
+    border: 2px solid #fff;
+    border-radius: 0.5rem;
+    padding: 0.3rem 1rem;
+    text-align: center;
+    background: rgb(0, 0, 48);
+    font-size: 1.3rem;
+    transition: all 0.4s ease;
+}
+
+.quiz__answer:hover {
+    background: rgb(68, 207, 245);
+    color: #fff;
+}
+
+.active-answer {
+    background: #1a53ff;
+}
+
+.correct {
+    background: green;
+    animation: correctAnswer 4s ease;
+}
+
+.wrong {
+    background: red;
+    animation: wrongAnswer 4s ease;
+}
+
+@keyframes correctAnswer {
+    0%, 35%, 55% {
+        background: mediumblue;
+    }
+    30%, 50%, 70% {
+        background: rgb(0, 0, 48);
+    }
+    75% {
+        background: green;
+    }
+}
+
+@keyframes wrongAnswer {
+    0%, 35%, 55% {
+        background: mediumblue;
+    }
+    30%, 50%, 70% {
+        background: rgb(0, 0, 48);
+    }
+    75% {
+        background: red;
+    }
+}
+
+/* ********** DOLLAR AREA *********** */
+.dollar { 
+    width: 25%;
+    display: flex;
+    align-items: center;
+}
+
+.dollar__items {
+    display: flex;
+}
+
+.dollar-item-id, .dollar-item-value {
+    padding: 0.2rem 2rem;
+    text-align: left;
+}
+
+.dollar-item-id {
+    color: gray;
+    text-align: left;
+}
+
+.active {
+    background: rgb(89, 229, 185);
+    border-radius: 0.4rem;
+    width: 142%
+}
